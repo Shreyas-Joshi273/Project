@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <!--Include Or Link The Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="./assets/images/icon-check.svg" as="image" type="image/svg+xml" crossorigin="anonymous">
+</head>
+<body>
+    <!--Code Starts From Here-->
+    <header class="card">
+        <h1>TODO</h1>
+        <button id="theme-switcher">
+          <img src="./assets/images/icon-sun.svg" alt="Change color theme" />
+        </button>
+      </header>
+      <main>
+        <div class="card add">
+          <div class="cb-container">
+            <button id="add-btn">+</button>
+          </div>
+          <div class="txt-container">
+            <label for="addt">Create todo</label>
+            <input
+              type="text"
+              class="txt-input"
+              placeholder="Create a new todo..."
+              spellcheck="false"
+              autocomplete="off"
+              id="addt"
+            />
+          </div>
+        </div>
+        <ul class="todos"></ul>
+        <div class="card stat">
+          <p class="corner"><span id="items-left">0</span> items left</p>
+          <div class="filter">
+            <button id="all" class="on">All</button>
+            <button id="active">Active</button>
+            <button id="completed">Completed</button>
+          </div>
+          <div class="corner">
+            <button id="clear-completed">Clear Completed</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>Drag and drop to reorder list</p>
+      </footer>
+</body>
+<!--Add The JavaScript File URL Here-->
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,290 @@
+/*Import The Fonts*/
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+}
+
+/*---------------
+ Variables 
+ -------------*/
+ :root {
+    --textblue: hsl(238, 29%, 16%);
+    --text-dkblue: hsl(237, 12%, 33%);
+    --text-xdkblue: hsl(240, 6%, 50%);
+    --text-red: hsl(14, 88%, 65%);
+    --gradient-violet: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+    --divider: hsl(240, 5%, 91%);
+  }
+
+/*Remove Extra Paddings And Margins*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/*Global CSS For h1,...h6*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 3rem;
+    min-height: 100vh;
+    background: linear-gradient(var(--gradient-violet), var(--gradient-blue));
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/*Wrapper*/
+.wrapper {
+    max-width: 920px;
+    width: 100%;
+    height: 509px;
+    margin: 0 auto;
+    background: #fff;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 1260% 65%;
+    border-radius: 30px;
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 3rem;
+    align-content: center;
+    justify-content: center;
+
+}
+
+/*Accordion Image*/
+.accordion-image {
+    margin-top: 40px;
+}
+
+.accordion-image-inner {
+    background: url('./images/illustration-woman-online-desktop.svg') no-repeat 200% center;
+    width: 100%;
+    height: 360px;
+    position: relative;
+
+}
+
+/*Box-Icon*/
+.box {
+    position: absolute;
+    top: 139px;
+    left: -111px;
+}
+
+/*Accordion-Wrapper*/
+.accordion-wrapper {
+    height: 400px;
+    margin-top: 40px;
+}
+
+.accordion {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    flex-direction: column;
+    padding: 23px 30px;
+}
+
+.accordion-title {
+    font-size: 2.3rem;
+    padding: 0 27px;
+}
+
+/*Question Answer Accordion*/
+.question-answer-accordion {
+    width: 350px;
+    border-bottom: 1px solid var(--divider);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.question {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-xdkblue);
+    margin: 8px 0;
+    transition: 0.3s ease;
+}
+
+.answer {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.answer p {
+    font-size: 1rem;
+    line-height: 23px;
+    color: var(--text-dkblue);
+}
+
+.question-answer-accordion:hover .question-title {
+    color: var(--text-red);
+}
+
+.active .question-title {
+    font-weight: 700;
+    color: var(--textblue);
+}
+
+/*Arrow Icon*/
+.icon {
+    align-self: center;
+    transition: 0.3s ease;
+}
+
+.active .icon {
+    transform: rotate(180deg);
+}
+
+.active .answer {
+    height: 70px;
+}
+
+
+/*Responsive Design For Devices*/
+@media only screen and (max-width: 1040px) {
+        .wrapper {
+            grid-template-columns: repeat(2, 400px);
+        }
+}
+
+/* ---------x------------Viewport Width is less than or eqal to 1040px-----------x----------- */
+
+/* ----------------------Viewport Width is less than or eqal to 960px----------------------- */
+
+@media only screen and (max-width: 960px) {
+    .wrapper {
+        grid-gap: 0;
+    }
+    .box {
+        display: none;
+    }
+    .accordion {
+        padding: 23px 0;
+    }
+    .accordion-title {
+        padding: 0;
+    }
+    .accordion-image-inner {
+        background: url('./images/illustration-woman-online-desktop.svg')no-repeat;
+        width: 340px;
+        height: 260px;
+        background-size: contain;
+    }
+}
+
+/* ---------x------------Viewport Width is less than or eqal to 960px-----------x----------- */
+
+/* ----------------------Viewport Width is less than or eqal to 811px----------------------- */
+
+@media only screen and (max-width: 811px) {
+        .question-answer-accordion {
+            width: 318px;
+        }
+        .accordion-image-inner {
+            width: 320px;
+        }
+
+}
+
+/* ---------x------------Viewport Width is less than or eqal to 811px-----------x----------- */
+
+/* ----------------------Viewport Width is less than or eqal to 767px----------------------- */
+
+@media  only screen and (max-width: 767px) {
+    body {
+        padding: 6rem 1.5rem;
+    }
+    .box {
+        display: none;
+    }
+    .wrapper {
+        max-width: 350px;
+        height: 80vh;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: 100px 1fr;
+        position: relative;
+        grid-gap: 1rem;
+        background: #fff;
+    }
+    .accordion-image {
+        background: url('./images/bg-pattern-mobile.svg')no-repeat center 600%;
+        height: 100%;
+    }
+    .accordion-image-inner {
+        background: url('./images/illustration-woman-online-mobile.svg') no-repeat;
+        position: absolute;
+        top: -80px;
+        left: 52px;
+    }
+    .accordion {
+        padding: 25px 30px;
+    }
+    .question-answer-accordion {
+        width: 100%;
+    }
+    .accordion-title {
+        text-align: center;
+    }
+}
+
+/* ---------x------------Viewport Width is less than or eqal to 767px-----------x----------- */
+
+/* ----------------------Viewport Width is less than or eqal to 440px----------------------- */
+
+@media only screen and (max-width: 440px) {
+    
+    body {
+        padding: 6rem 0.5rem 3rem;
+    }
+    .accordion {
+        padding: 25px 15px;
+    }
+    .accordion-image-inner {
+        width: 292px;
+        height: 183px;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        top: 1%;
+        left: 50%;
+    }
+    .question-title, .answer p {
+        font-size: 0.85rem;
+    }
+
+}
