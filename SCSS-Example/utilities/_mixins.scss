@@ -1,0 +1,4 @@
+@mixin theme( $bg: #000, $color: #fff) {
+    background-color: $bg;
+    border: 1px solid $color;
+}
