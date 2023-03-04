@@ -1,0 +1,29 @@
+.declaration-order{
+    /*POSITIONING ALWAYS FIRST*/
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left:0;
+    z-index:100;
+
+    /*BOX-MODEL*/
+    display: block;
+    float:right;
+    width: 100px;
+    height: 100px;
+
+    /*TYPOGRAPHY*/
+    font: normal 13px "Helvetica Nueue",sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    /*VISUALS*/
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    /*MISC*/
+    opacity: 1;
+}
